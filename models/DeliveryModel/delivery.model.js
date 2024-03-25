@@ -5,14 +5,12 @@ const Schema = mongoose.Schema;
 const deliverySchema = new Schema({
 
     deliveryId: { type: Number, required: false, unique: true, index: true },
-    orderID : { type : String, required : true },
 	receiverAddress : { type : String, required : true },
-    receiverContactNumber : {type : Number,  required : true, maxLength: 10},
+    receiverContactNumber : {type : Number,  required : true},
     assignedDriver : { type : String, required : true },
     deliveryDate : { type : Date, required : true },
     deliveryStatus : { type : String, required : true },
     vehicleNo: { type : String, required : true },
-    deliveryItems :{ type : String, required : true }
 },{
     timestamps: true
 }); 

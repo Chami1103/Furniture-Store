@@ -14,7 +14,6 @@ router.route('/getalldrivers').get((_req, res) => {
 
 router.route("/addnewdriver").post((req,res)=>{
 
-    const empID = req.body.empID;
     const empFirstName = req.body.empFirstName;
     const empLastName = req.body.empLastName;
 	const empEmail = req.body.empEmail;
@@ -23,7 +22,6 @@ router.route("/addnewdriver").post((req,res)=>{
 	
 
     const newDriver = new Driver({
-        empID, 
         empFirstName,
         empLastName,
         empEmail,
@@ -45,8 +43,6 @@ router.route('/updatedriver/:id').put((req, res) => {
             if (!driver) {
                 return res.status(404).json('Driver not found');
             }
-
-            driver.empID = req.body.empID;
             driver.empFirstName = req.body.empFirstName;
             driver.empLastName = req.body.empLastName;
 			driver.empEmail = req.body.empEmail;
@@ -63,7 +59,7 @@ router.route('/updatedriver/:id').put((req, res) => {
 //Remove Driver ('http://localhost:8081/api/delivery/drivers/removedriver')
 
 router.route('/removedriver/:id').delete((req, res) => {
-    Driver.findByIdAndUpdate(req.params.id)
+    Driver.findByIdAndDelete(req.params.id)
         .then(() => res.json(' Successfully remove driver from the system !'))
         .catch(err => res.status(400).json('Error: ' + err));
 });

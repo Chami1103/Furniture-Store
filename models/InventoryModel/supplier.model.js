@@ -7,7 +7,7 @@ const supplierSchema = new Schema({
     supplierId: { type: Number, required: false, unique: true, index: true },
     supplierName : { type : String, required : true },
     supplierEmail : { type : String, required : true, match: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,},
-    supplierContactNumber : {  type : Number,  required : true,  maxLength: 10 },
+    supplierContactNumber : {  type : Number,  required : true },
     supplierAddress : { type : String, required : true },
     supplierItemCategory: { type : String, required : true },
 

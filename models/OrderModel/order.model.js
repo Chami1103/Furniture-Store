@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const orderSchema = new Schema({
 
     orderId : { type:Number, required:false, unique: true, index: true },
-    customerName : { type:String, required:true},
+    // customerName : { type:String, required:true},
     address: {type:String, required:true},
     Phone: { type: Number, required: true },
     orderDate :{ type:Date, required: true },

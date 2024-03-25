@@ -5,17 +5,17 @@ const Feedback = require('../../models/FeedbackModel/feedback.model');
 //add feedback ('http://localhost:8081/api/feedback/feedback/addfeedback')
 router.route("/addfeedback").post((req,res)=>{
     const Username = req.body.Username;
-    const Phone = Number(req.body.Phone);
-    const Email = req.body.Email;
     const date = Date.parse(req.body.date);
+    const starCount = Number(req.body.starCount);
     const feedbackMsg = req.body.feedbackMsg;
+    const suggetion = req.body.suggetion;
 
     const newFeedback = new Feedback({
         Username, 
-        Phone,
-        Email,
         date,
-        feedbackMsg
+        starCount,
+        feedbackMsg,
+        suggetion
     })
 
     newFeedback.save()
@@ -42,10 +42,10 @@ router.route('/update/:id').put((req, res) => {
             }
 
             feedback.Username = req.body.Username;
-            feedback.Phone = Number(req.body.Phone);
-            feedback.Email = req.body.Email;
             feedback.date = Date.parse(req.body.date);
+            feedback.starCount = Number(req.body.starCount);
             feedback.feedbackMsg = req.body.feedbackMsg;
+            feedback.suggetion = req.body.suggetion;
 
             feedback.save()
                 .then(() => res.json('Feedback updated successfully!'))

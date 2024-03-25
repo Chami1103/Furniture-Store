@@ -21,7 +21,8 @@ router.route("/addnewitem").post((req,res)=>{
     const maxStockLevel = Number(req.body.maxStockLevel);
 	const purchasePrice = req.body.purchasePrice;
 	const sellingPrice = req.body.sellingPrice;
-	const supplierId = Number(req.body.supplierId);
+    const totalStockPrice = req.body.totalStockPrice;
+	const supplierName = req.body.supplierName;
 
     const newProduct = new Inventory({
         itemCategory, 
@@ -31,7 +32,8 @@ router.route("/addnewitem").post((req,res)=>{
         maxStockLevel,
         purchasePrice,
         sellingPrice,
-        supplierId
+        totalStockPrice,
+        supplierName
     })
 
     newProduct.save()  
@@ -56,7 +58,8 @@ router.route('/updateitem/:id').put((req, res) => {
             inventory.maxStockLevel = Number(req.body.maxStockLevel);
 			inventory.purchasePrice = req.body.purchasePrice;
 			inventory.sellingPrice = req.body.sellingPrice;
-			inventory.supplierId = Number(req.body.supplierId);
+            inventory.totalStockPrice = req.body.totalStockPrice;
+			inventory.supplierName = req.body.supplierName;
             inventory.save()
                 .then(() => res.json('Item details updated successfully!'))
                 .catch(err => res.status(400).json('Error: ' + err));

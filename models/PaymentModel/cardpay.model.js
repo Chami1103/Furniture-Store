@@ -6,15 +6,8 @@ const cardpaySchema = new Schema({
 
     cardId : { type:Number, required:false, unique: true, index: true },
     cardnumber : {
-        type:Number,
+        type:String,
         required:true,
-        validate: {
-            validator: function (value) {
-              // Use a regular expression to validate the credit card number format
-              return /^\d{16}$/.test(value.toString());
-            },
-            message: 'Invalid credit card number format',
-        },
         unique: true,
     },
 

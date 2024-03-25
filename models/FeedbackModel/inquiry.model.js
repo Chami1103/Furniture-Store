@@ -8,6 +8,7 @@ const inquirySchema = new Schema({
     lastName : { type : String, required : true },
     Email : { type : String, required : true},
     Phone : { type: Number, required: true},
+    date: {  type: Date, required: false, default: Date.now },
     title : { type: String, required: true },
     inquiryMsg : { type : String, required : true }
 },{

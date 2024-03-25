@@ -13,7 +13,7 @@ router.route('/getallcards').get((_req, res) => {
 
 router.route("/addnewcard").post((req,res)=>{
 
-    const cardnumber = Number(req.body.cardnumber);
+    const cardnumber = req.body.cardnumber;
     const customerName = req.body.customerName;
     const cvc = Number(req.body.cvc);
     const expiry = Date.parse(req.body.expiry);
@@ -40,7 +40,7 @@ router.route('/updatecard/:id').put((req, res) => {
                 return res.status(404).json('Card not found');
             }
 
-            cardpay.cardnumber = Number(req.body.cardnumber);
+            cardpay.cardnumber = req.body.cardnumber;
             cardpay.customerName = req.body.customerName;
 			cardpay.cvc = Number(req.body.cvc);
             cardpay.expiry = Date.parse(req.body.expiry);

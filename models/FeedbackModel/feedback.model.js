@@ -5,14 +5,11 @@ const Schema = mongoose.Schema;
 const feedbackSchema = new Schema({
     feedbackId: { type: Number, required: false, unique: true, index: true },
     Username: { type: String, required: true },
-    Phone: { type: Number, required: true },
-    Email: { type: String, required: true },
-    date: {        
-         type: Date,
-        required: true,
+    date: {  type: Date, required: true, default: Date.now },
+    starCount: {type: Number, required: true},
+    feedbackMsg: { type: String, required: true },
+    suggetion: { type: String, required: true },
 
- },
-    feedbackMsg: { type: String, required: true }
 }, 
 {
     timestamps: true

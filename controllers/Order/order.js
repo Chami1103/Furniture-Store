@@ -13,7 +13,7 @@ router.route('/getallorders').get((_req, res) => {
 
 router.route("/createorder").post((req,res)=>{
 
-    const customerName = req.body.customerName;
+    // const customerName = req.body.customerName;
     const address = req.body.address;
     const Phone = Number(req.body.Phone);
     const orderDate = Date.parse(req.body.orderDate);
@@ -22,7 +22,7 @@ router.route("/createorder").post((req,res)=>{
 
     const newOrder = new Order({
 
-        customerName,
+        // customerName,
         address,
         Phone,
         orderDate,
@@ -44,7 +44,7 @@ router.route('/changeorder/:id').put((req, res) => {
                 return res.status(404).json('Order not found');
             }
 
-            order.customerName = req.body.customerName;
+            // order.customerName = req.body.customerName;
             order.address = req.body.address;
             order.Phone = Number(req.body.Phone);
             order.orderDate = Date.parse(req.body.orderDate);

@@ -14,25 +14,21 @@ router.route('/getalldeliveries').get((_req, res) => {
 
 router.route("/addnewdelivery").post((req,res)=>{
 
-    const orderID = req.body.orderID;
     const receiverAddress = req.body.receiverAddress;
     const receiverContactNumber = Number(req.body.receiverContactNumber);
 	const assignedDriver = req.body.assignedDriver;
     const deliveryDate = Date.parse(req.body.deliveryDate);
 	const deliveryStatus = req.body.deliveryStatus;
 	const vehicleNo = req.body.vehicleNo;
-	const deliveryItems = req.body.deliveryItems;
-	
 
     const newDelivery = new Delivery({
-        orderID, 
+
         receiverAddress,
         receiverContactNumber,
         assignedDriver,
         deliveryDate,
         deliveryStatus,
 		vehicleNo,
-		deliveryItems
     })
 
     newDelivery.save()  
@@ -50,14 +46,14 @@ router.route('/updatedelivery/:id').put((req, res) => {
                 return res.status(404).json('Delivery not found');
             }
 
-            delivery.orderID = req.body.orderID;
+            // delivery.orderID = req.body.orderID;
             delivery.receiverAddress = req.body.receiverAddress;
             delivery.receiverContactNumber = Number(req.body.receiverContactNumber);
 			delivery.assignedDriver = req.body.assignedDriver;
             delivery.deliveryDate = Date.parse(req.body.deliveryDate);
 			delivery.deliveryStatus = req.body.deliveryStatus;
 			delivery.vehicleNo = req.body.vehicleNo;
-			delivery.deliveryItems = req.body.deliveryItems;
+			// delivery.deliveryItems = req.body.deliveryItems;
             delivery.save()
                 .then(() => res.json('Delivery details updated successfully!'))
                 .catch(err => res.status(400).json('Error: ' + err));

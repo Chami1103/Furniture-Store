@@ -15,20 +15,14 @@ router.route("/newpayment").post((req,res)=>{
 
     const paymentMethod = req.body.paymentMethod;
     const paymentAmount = req.body.paymentAmount;
-    const customerId = req.body.customerId;
     const customerName = req.body.customerName;
-    const odrerId = req.body.odrerId;
     const transactionDate = Date.parse(req.body.transactionDate);
-    const status = req.body.status;
 
     const newPayment = new Payment({
         paymentMethod, 
         paymentAmount,
-        customerId,
         customerName,
-        odrerId,
         transactionDate,
-        status
     })
 
     newPayment.save()  

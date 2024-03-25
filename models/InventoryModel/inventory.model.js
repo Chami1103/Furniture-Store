@@ -12,7 +12,8 @@ const inventorySchema = new Schema({
     maxStockLevel : { type : Number, required : true },
     purchasePrice : { type : String, required : true },
     sellingPrice : { type : String, required : true },
-    supplierId : { type : Number, required : true },
+    supplierName : { type : String, required : true },
+    totalStockPrice: {type : String, required : false }
 },{
     timestamps: true
 }); 

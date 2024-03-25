@@ -40,7 +40,7 @@ router.route('/getallinquiries').get((_req, res) => {
 //Remove inquiry ('http://localhost:8081/api/feedback/inquiry/removeinquiry')
 
 router.route('/removeinquiry/:id').delete((req, res) => {
-    Inquiry.findOneAndDelete(req.params.id)
+    Inquiry.findByIdAndDelete(req.params.id)
         .then(() => res.json('Inquiry deleted successfully !'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
@@ -48,7 +48,7 @@ router.route('/removeinquiry/:id').delete((req, res) => {
 //view one inquiry ('http://localhost:8081/api/feedback/inquiry/getinquirybyid')
 
 router.route('/getinquirybyid/:id').get((req, res) => {
-    Inquiry.findOne(req.params.id)
+    Inquiry.findById(req.params.id)
         .then(inquiry => res.json(inquiry))
         .catch(err => res.status(400).json('Error: ' + err));
 });
