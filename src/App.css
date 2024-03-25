@@ -1,0 +1,549 @@
+
+
+/*Header*/
+body {
+  font-family: 'Amazon Ember';
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+
+
+#search_btn {
+  background-color: #febd69;
+}
+
+.input-group {
+  width: 45%;
+  margin-top: 5px;
+  margin-left: 30%;
+}
+.input-groups {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 680px;
+  width: 67.5%;
+  margin-left: 30%;
+}
+
+#search_field {
+  height: 2.4rem;
+  padding: 1rem;
+}
+#search_fields {
+  height: 2.4rem;
+  padding: 1rem;
+}
+
+#login_btn,
+#view_btn {
+  background-color: #febd69;
+  padding: 0.4rem 1.8rem;
+  font-family: calibri;
+}
+
+#cart {
+  font-size: 1rem;
+  color: white;
+}
+
+#cart_count {
+  background-color: #febd69;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+
+/*-----*/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Login & Register */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+
+  font-weight: 700;
+}
+
+.wrapper form {
+  padding: 2.5rem 3rem;
+}
+
+
+.wrapper form .btn {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+  color: white;
+  margin-top: 2.5rem;
+}
+
+.wrapper form a {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+
+/* User Profile */
+
+.avatar-profile {
+  height: 16rem;
+  width: 16rem;
+}
+
+.user-info h4 {
+  font-weight: 800;
+  color: grey;
+  margin-top: 2rem;
+}
+
+.user-info p {
+  font-size: 1.1rem;
+}
+
+#edit_profile {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+}
+
+
+/* User Profile */
+
+.avatar-profile {
+  height: 16rem;
+  width: 16rem;
+}
+
+.user-info h4 {
+  font-weight: 800;
+  color: grey;
+  margin-top: 2rem;
+}
+
+.user-info p {
+  font-size: 1.1rem;
+}
+
+#edit_profile {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+}
+
+
+
+/* Admin Sidebar */
+
+ 
+
+.sidebar-wrapper {
+
+  display: flex;
+
+  width: 100%;
+
+  align-items: stretch;
+
+  min-height: 100vh;
+
+  font-weight: normal;
+
+ 
+
+  margin-top: 0;
+
+  height: 100%;
+
+  left: 0;
+
+  top: 0;
+
+  z-index: 10;
+
+}
+
+#sidebar {
+
+  min-width: 100%;
+
+  max-width: 100%;
+  height: 140%;
+
+  background: #232f3e;
+
+  color: #fff;
+
+  transition: all 0.3s;
+
+}
+
+#sidebar.active {
+
+  margin-left: -250px;
+
+}
+
+ 
+
+#sidebar .sidebar-header {
+
+  padding: 20px;
+
+  background: #232f3e;
+
+}
+
+#sidebar ul.components {
+
+  padding: 5px 0px;
+
+  border-bottom: 1px solid #232f3e;
+
+}
+
+ 
+
+#sidebar ul li a {
+
+  padding: 10px;
+
+  font-size: 1.1em;
+
+  display: block;
+
+  color: white;
+
+  text-decoration: none;
+
+}
+
+#sidebar ul li a:hover {
+
+  color: #232f3e;
+
+  background: #fff;
+
+}
+
+ 
+
+#sidebar ul li a i {
+
+  margin-right: 0.3rem;
+
+}
+
+ 
+
+#sidebar ul li.active > a,
+
+a[aria-expanded='true'] {
+
+  color: #fff;
+
+  background: #232f3e;
+
+}
+
+a[data-toggle='collapse'] {
+
+  position: relative;
+
+}
+
+.dropdown-toggle::after {
+
+  display: block;
+
+  position: absolute;
+
+  top: 50%;
+
+  right: 20px;
+
+  transform: translateY(-50%);
+
+}
+
+ 
+
+ul ul a {
+
+  font-size: 1rem !important;
+
+  padding-left: 30px !important;
+
+  background: #232f3e;
+
+}
+
+ 
+
+ul.CTAs {
+
+  padding: 20px;
+
+}
+
+ 
+
+ul.CTAs a {
+
+  text-align: center;
+
+  font-size: 0.9em !important;
+
+  display: block;
+
+  border-radius: 5px;
+
+  margin-bottom: 5px;
+
+}
+/* Loader */
+
+.loader {
+
+  display: block;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+  margin-top: 20%;
+
+  width: 80px;
+
+  height: 80px;
+
+  padding-left: 0;
+
+}
+
+.loader:after {
+
+  content: ' ';
+
+  display: block;
+
+  width: 64px;
+
+  height: 64px;
+
+  margin: 8px;
+
+  border-radius: 50%;
+
+  border: 6px solid #fa9c23;
+
+  border-color: #fa9c23 transparent;
+
+  animation: lds-dual-ring 1.2s linear infinite;
+
+}
+
+@keyframes lds-dual-ring {
+
+  0% {
+
+    transform: rotate(0deg);
+
+  }
+
+  100% {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+ 
+
+/* banner section */
+
+.banner_section {
+  width: 100%;
+  float: left;
+  padding: 90px 0px;
+}
+.icon_1{
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+.furniture_text{
+  width: 100%;
+  float: left;
+  font-size: 100px;
+  color: #090808;
+  text-align: center;
+  text-transform: uppercase;
+}
+.there_text {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #090808;
+  text-align: center;
+}
+.contact_bt_main{
+  width: 17%;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact_bt {
+  width: 100%;
+  float: left;
+  margin-top: 360px;
+}
+.contact_bt a{
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #ffb607;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.contact_bt a:hover{
+  color: #ffffff;
+  background-color: #000;
+}
+
+
+
+.fa-angle-right:before {
+  content: "\f105";
+}
+.fa-angle-left:before {
+  content: "\f105";
+}
+#costum_slider a.carousel-control-prev {
+  position: absolute;
+  left: -153px;
+  top: 57%;
+  background-color: #000;
+  color: #ffffff;
+  border-radius: 100px;
+}
+
+
+
+#costum_slider a.carousel-control-next {
+  position: absolute;
+  right: -150px;
+  top: 57%;
+}
+#costum_slider .carousel-control-prev, #costum_slider .carousel-control-next {
+  width: 85px;
+  height: 85px;
+  background: #000;
+  opacity: 1;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 100px;
+}
+#costum_slider .carousel-control-prev:hover, #costum_slider .carousel-control-next:hover, #costum_slider .carousel-control-prev:focus, #costum_slider .carousel-control-next:focus {
+  background: #f8ca12;
+  color: #fff;
+}
+
+
+/* header section */
+
+.header_section{
+  width: 100%;
+  height: 50%;
+  /* float: left; */
+  background-image: url(../public/images/banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 250px;
+}
+
+.bg-light {
+  background-color: transparent !important;
+}
+
+
+
+
+/* CSS for the image overlay */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the overlay is on top */
+}
+
+/* CSS for the image displayed in the overlay */
+.image-overlay img {
+  max-width: 90%; /* Adjust as needed */
+  max-height: 90vh; /* Adjust as needed */
+}
+
+
+/* CSS for the close icon2 */
+.close-icon2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff; /* Color of the close icon */
+  z-index: 100; /* Ensure it's above the image */
+}
+
+

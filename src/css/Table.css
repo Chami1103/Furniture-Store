@@ -1,0 +1,156 @@
+
+:root{
+    --dark: black;
+    --light:white;
+    --border: #dee2de;
+    --border-btn:#edf2f4;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    
+}
+
+.container-list{
+     max-width: 1024px;
+     margin: auto;
+     margin-right: 10%;
+  
+     
+
+}
+.d-flex{
+    display:flex;
+    flex-wrap: wrap;
+
+
+}
+.justify-between{
+    justify-content: space-between;
+    width: 100%;
+
+}
+.text-center{
+    text-align: center;
+}
+
+    
+
+.text-dark{
+    color: var(--dark);
+
+}
+.inline{
+    display: inline-block;
+}
+.text-light{
+    color: var(--light);
+
+}
+.text-gradient{
+    background: linear-gradient(to right,#490d7e,#4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: violet;
+    
+}
+.text-gradient-add{
+    width: 4cm;
+    height: 1cm;
+    background-color: rgb(27, 191, 202);
+    border-radius: 5px;
+    border-color: rgb(152, 162, 173);
+    color: rgb(40, 20, 220);
+    font-family:Arial, Helvetica, sans-serif;
+   
+
+
+    
+    
+}
+#site-main{
+    margin-top: 3em;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+#site-main.container-list.box-nav> a{
+
+    font-size: 1em;
+    padding: .5em 1em;
+    
+}
+
+#site-main.container-list form{
+    margin: 2em 0;
+
+}
+table{
+    border-spacing: 0px;
+    width: 100%;
+    margin-right: 150px;
+   
+}
+.table td,.table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    
+
+}
+.btn-border-shadow-update{
+
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0.2em;
+
+
+}
+.btn-border-shadow-delete{
+
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0.2em;
+
+}
+
+.thead-dark {
+
+    color: #fff;
+    background-color: black;
+    border-color: #32383e;
+}
+.tbody{
+    background-color:rgb(237, 240, 234);
+    
+}
+.tbody  :hover{
+    background-color: #ffc107;
+}
+.table tr:hover td>a{
+   box-shadow: none;
+   overflow-y: auto;
+    
+
+   
+}
+
+.h2-user-list{
+
+    font-weight: bold;
+    margin-left: 80px;
+    top: 0%;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+
+
